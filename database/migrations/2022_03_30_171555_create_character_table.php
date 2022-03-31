@@ -24,13 +24,6 @@ return new class extends Migration
             $table->string('concept')->nullable()->comment('Concepto del personaje');
             $table->string('alignment')->nullable()->comment('Alineamiento del personaje');
 
-
-            $table->integer('dynamic_resonance')->default(0)->nullable()->comment('Resonacia dinamica');
-            $table->integer('chaotic_resonance')->default(0)->nullable()->comment('Resonacia caotica');
-            $table->integer('static_resonance')->default(0)->nullable()->comment('Resonacia estatica');
-            $table->integer('Occultism')->default(0)->nullable()->comment('Resistencia mental');
-            $table->integer('Occultism')->default(0)->nullable()->comment('Resistencia magica');
-            $table->integer('Occultism')->default(0)->nullable()->comment('Resistencia espiritual');
             $table->timestamps();
         });
     }

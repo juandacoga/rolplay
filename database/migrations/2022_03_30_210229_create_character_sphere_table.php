@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('charcter_sphere', function (Blueprint $table) {
+        Schema::create('character__sphere', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('id_character')->default(0)->nullable()->comment('id del personaje');
             $table->integer('order')->default(0)->nullable()->comment('Orden');
@@ -36,6 +36,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('charcter_sphere');
+        Schema::dropIfExists('character__sphere');
     }
 };

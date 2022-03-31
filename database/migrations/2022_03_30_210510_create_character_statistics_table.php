@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('charcter_statistics', function (Blueprint $table) {
+        Schema::create('character__statistics', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('id_character')->default(0)->nullable()->comment('id del personaje');
 
@@ -40,6 +40,11 @@ return new class extends Migration
             $table->integer('chaotic_resonance')->default(0)->nullable()->comment('Resonacia caotica');
             $table->integer('static_resonance')->default(0)->nullable()->comment('Resonacia estatica');
 
+            $table->integer('mental_resistance')->default(0)->nullable()->comment('Resistencia mental');
+            $table->integer('magic_resistance')->default(0)->nullable()->comment('Resistencia magica');
+            $table->integer('spiritual_resistance')->default(0)->nullable()->comment('Resistencia espiritual');
+            $table->integer('physical_resistance')->default(0)->nullable()->comment('Resistencia fisica');
+
             $table->timestamps();
         });
     }
@@ -51,6 +56,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('charcter_statistics');
+        Schema::dropIfExists('character__statistics');
     }
 };
