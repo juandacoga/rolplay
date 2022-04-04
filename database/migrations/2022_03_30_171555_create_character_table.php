@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('character__manager', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('id_user')->default(0)->nullable()->comment('id de usuario');
             $table->string('name')->nullable()->comment('Nombre del personaje');
             $table->string('player')->nullable()->comment('Nombre del jugador');
             $table->string('nature')->nullable()->comment('Naturaleza del personaje');
