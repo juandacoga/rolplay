@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('character_gem', function (Blueprint $table) {
+        Schema::create('character__gem', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('id_character')->default(0)->nullable()->comment('id del personaje');
 
@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('character_gem');
+        Schema::dropIfExists('character__gem');
     }
 };
